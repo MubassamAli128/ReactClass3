@@ -1,7 +1,8 @@
 import React,{ useState,useEffect } from "react";
-import Ucimg from "../assets/Ucimg"
+import UCimg from "../assets/UCimg.jpeg"
+import UCBoxButton from "../components/UCBoxButton"
 
-function UCBox(){
+let UCBox=()=>{
     const [count, setCount]=useState(()=>{
         const ucStorage=parseInt(localStorage.getItem('usStorage'));
         return ucStorage? ucStorage:0;
@@ -12,10 +13,12 @@ function UCBox(){
     })
 
     return(
-        <div className={'p-4 flex gap-2 items-center select-none'}>
-            <img src="" width={30} alt="" />
+        <div className={'p-4 flex bg-red-500 gap-2 items-center select-none'}>
+            <img src={UCimg} width={30} alt="" />
             {count}
             <UCBoxButton onClick={()=>setCount(count+1)} text="+"></UCBoxButton>
         </div>
     )
 }
+
+export default UCBox
