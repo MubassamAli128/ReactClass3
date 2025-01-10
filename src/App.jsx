@@ -1,11 +1,11 @@
 import React from 'react'
-import Count from "./components/Count"
+import Time from "./components/Time"
 function App() {
 
   return (
     <>
       <div>
-        <Count/>
+        <Time/>
       </div>
     </>
   )
