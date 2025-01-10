@@ -1,11 +1,11 @@
 import React from 'react'
-import UCBox from "./components/UCBox"
+import Count from "./components/Count"
 function App() {
 
   return (
     <>
       <div>
-        <UCBox/>
+        <Count/>
       </div>
     </>
   )
