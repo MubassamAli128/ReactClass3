@@ -3,8 +3,6 @@ import data from "../data.json";
 import { CiWallet } from "react-icons/ci";
 
 const DataTable = () => {
-    let statueColor="";
-
     return (
     <>
         {data.map((row, index) => (
