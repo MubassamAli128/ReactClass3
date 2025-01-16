@@ -2,6 +2,7 @@
     {
         "date": "2025-01-12",
         "time":"10:00 am",
+        "title":"Title",
         "description": "Payment to Vendor A for office supplies",
         "amount": 250.00,
         "status": "paid"
@@ -9,6 +10,7 @@
     {
         "date": "2025-01-13",
         "time":"10:00 am",
+        "title":"Title",
         "description": "Refund from Customer B",
         "amount": -150.00,
         "status": "received"
@@ -16,6 +18,7 @@
     {
         "date": "2025-01-14",
         "time":"10:00 am",
+        "title":"Title",
         "description": "Invoice from Contractor C",
         "amount": 500.00,
         "status": "paid"
@@ -23,13 +26,15 @@
     {
         "date": "2025-01-15",
         "time":"10:00 am",
+        "title":"Title",
         "description": "Subscription renewal for SaaS",
-        "amount": 100.00,
+        "amount": -250.00,
         "status": "paid"
     },
     {
         "date": "2025-01-16",
         "time":"10:00 am",
+        "title":"Title",
         "description": "Bonus payment to Employee D",
         "amount": 300.00,
         "status": "received"
@@ -37,6 +42,7 @@
     {
         "date": "2025-01-16",
         "time":"10:00 am",
+        "title":"Title",
         "description": "Bonus payment to Employee D",
         "amount": 300.00,
         "status": "received"
@@ -44,6 +50,7 @@
     {
         "date": "2025-01-16",
         "time":"10:00 am",
+        "title":"Title",
         "description": "Bonus payment to Employee D",
         "amount": 300.00,
         "status": "paid"
@@ -51,6 +58,7 @@
     {
         "date": "2025-01-16",
         "time":"10:00 am",
+        "title":"Title",
         "description": "Bonus payment to Employee D",
         "amount": 300.00,
         "status": "received"
