@@ -2,65 +2,65 @@
     {
         "date": "2025-01-12",
         "time":"10:00 am",
-        "title":"Title",
-        "description": "Payment to Vendor A for office supplies",
-        "amount": 250.00,
+        "title":"Globex Co.",
+        "description": "Invoice #12356489",
+        "amount": "250.00",
         "status": "paid"
     },
     {
         "date": "2025-01-13",
         "time":"10:00 am",
-        "title":"Title",
-        "description": "Refund from Customer B",
-        "amount": -150.00,
+        "title":"Amazon",
+        "description": "Purchase - Books and Electronics",
+        "amount": "-150.00",
         "status": "received"
     },
     {
         "date": "2025-01-14",
         "time":"10:00 am",
-        "title":"Title",
-        "description": "Invoice from Contractor C",
-        "amount": 500.00,
+        "title":"Netflix",
+        "description": "Subscription - Monthly Membership",
+        "amount": "500.00",
         "status": "paid"
     },
     {
         "date": "2025-01-15",
         "time":"10:00 am",
-        "title":"Title",
-        "description": "Subscription renewal for SaaS",
-        "amount": -250.00,
+        "title":"Starbucks",
+        "description": "Purchase - Coffee and Food",
+        "amount": "-250.00",
         "status": "paid"
     },
     {
         "date": "2025-01-16",
         "time":"10:00 am",
-        "title":"Title",
-        "description": "Bonus payment to Employee D",
-        "amount": 300.00,
+        "title":"Globex Co.",
+        "description": "Invoice #12356489",
+        "amount": "300.00",
         "status": "received"
     },
     {
         "date": "2025-01-16",
         "time":"10:00 am",
-        "title":"Title",
-        "description": "Bonus payment to Employee D",
-        "amount": 300.00,
+        "title":"Apple",
+        "description": "Purchase - App Store",
+        "amount": "300.00",
         "status": "received"
     },
     {
         "date": "2025-01-16",
         "time":"10:00 am",
-        "title":"Title",
-        "description": "Bonus payment to Employee D",
-        "amount": 300.00,
+        "title":"Uber",
+        "description": "Ride - Shared Ride",
+        "amount": "-500.00",
         "status": "paid"
     },
     {
         "date": "2025-01-16",
         "time":"10:00 am",
-        "title":"Title",
-        "description": "Bonus payment to Employee D",
-        "amount": 300.00,
+        "title":"Marketplace",
+        "description": "Purchase",
+        "amount": "300.00",
         "status": "received"
     }
 ]
