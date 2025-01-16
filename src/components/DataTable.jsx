@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import data from "../data.json";
 import { CiWallet } from "react-icons/ci";
 import { RiArrowLeftUpLine,RiArrowRightDownLine } from "react-icons/ri";
-import { FiArrowDownRight } from "react-icons/fi";
 
 const DataTable = () => {
+
+
+
+
+
     return (
     <>
         {data.map((row, index) => (
@@ -29,7 +33,7 @@ const DataTable = () => {
             <td className={`${row.amount > 0 ? "text-green-500" : "text-black"}`}>
                 {row.amount.toFixed(2)}
             </td>
-            <td className={`border-gray-500 flex gap-2 border rounded-full items-center justify-center w-[200px] `}>
+            <td className={`border-gray-500 flex gap-2 border rounded-full items-center justify-center mr-[10px] py-[5px] `}>
                 <div className={`${row.status=="paid"?"bg-green-500":"bg-blue-500"} rounded-full p-1`}></div>
                 <p className={`${row.status=="paid"?"text-green-500":"text-blue-500"}`}>{row.status}</p>
             </td>

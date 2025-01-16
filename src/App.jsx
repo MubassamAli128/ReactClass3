@@ -1,10 +1,32 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import TotalAmount from "./components/TotalAmount"
 import Dates from './components/Dates'
 import { FaSearch } from "react-icons/fa";
 import DataTable from "./components/DataTable"
 import './index.css'
 function App() {
+
+
+
+  const [input,setInput]=useState("");
+
+  const onChange=(event)=>{
+    const value = event.target.value;
+    console.log(value);
+    setInput(value);
+  }
+
+
+
+  useEffect(()=>{
+
+
+    
+
+
+  },[input])
+
+
 
   return (
     <>
@@ -15,7 +37,7 @@ function App() {
           <Dates/>
           <div className='flex items-center justify-between bg-white py-1 px-2 rounded-full border border-gray-300'>
             <FaSearch/>
-            <input type="text" name="" id="" placeholder='Search' className='bg-transparent pl-2 outline-none' />
+            <input onChange={onChange} value={input} type="text" name="" id="" placeholder='Search' className='bg-transparent pl-2 outline-none' />
           </div>
           <button className='bg-gray-300 rounded-full px-7 py-1'>Export</button>
         </div>
