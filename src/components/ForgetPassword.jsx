@@ -6,6 +6,27 @@ import Button from './Button'
 function ForgetPassword(props) {
     console.log(props.newpassword,props.confirmPassword);
 
+    const handleForget = (event) => {
+        if(event.target.id=="CancelForget"){
+            window.location.reload();
+            localStorage.setItem('currentPage',"LoginPage")
+        }else if(event.target.id=="ChangePass"){
+            if(props.newpassword&&props.confirmPassword!==""){
+                if(props.newpassword==props.confirmPassword){
+                    localStorage.setItem('Password',props.confirmPassword)
+                    props.onClick("Password updated!", "success");
+                    window.location.reload();
+                    localStorage.setItem('currentPage',"LoginPage")
+                }else{
+                    props.onClick("Confirm your password", "error");
+                }
+            }
+            else{
+                props.onClick("Fill both inputs", "error");
+            }
+        }
+    }
+
 
     const getColorClass = (passwordLength) => {
         let color = 'bg-gray-300';
@@ -21,9 +42,8 @@ function ForgetPassword(props) {
         if (passwordLength >= 10) {
             color = 'bg-red-500';
         }
-    
         return color;
-      };
+    };
     const colorClass1 = getColorClass(props.newpassword.length);
     const colorClass2 = getColorClass(props.confirmPassword.length);
 
@@ -51,8 +71,8 @@ function ForgetPassword(props) {
         </div>
         <hr className='border border-gray-300 w-full'/>
         <div className='flex items-center justify-between w-full'>
-            <Button id="ForgetCancel" text="Cancel" color="text-black" bgColor="bg-[#white] font-semibold" border="border-gray-400" />
-            <Button id="ChangePass" text="Change password" color="text-white" bgColor="bg-[#8359fd] font-semibold" border="border-gray-400" />
+            <Button id="CancelForget" text="Cancel" color="text-black" bgColor="bg-[#white] font-semibold" border="border-gray-400" onClick={handleForget}/>
+            <Button id="ChangePass" text="Change password" color="text-white" bgColor="bg-[#8359fd] font-semibold" border="border-gray-400" onClick={handleForget} />
         </div>
     </div>
   )

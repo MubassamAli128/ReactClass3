@@ -12,8 +12,8 @@ function LoginPage(props) {
 
   const handleLogin = (event) => {
     if(event.target.id=="SigninBtn"){
-      if(input.LoginEmail==localStorage.getItem("Email")){
-        if(input.LoginPass==localStorage.getItem("Password")){
+      if(props.inputValue.LoginEmail==localStorage.getItem("Email")){
+        if(props.inputValue.LoginPass==localStorage.getItem("Password")){
           props.onClick("Welcome Back!", "success");
           // window.location.reload();
         }else{
