@@ -4,6 +4,7 @@ import Popup from './components/Popup'
 import LoginPage from "./components/LoginPage"
 import ForgetPassword from './components/ForgetPassword'
 import RegisterPage from './components/RegisterPage'
+import VerificationCode from "./components/Verification"
 
 
 function App() {
@@ -50,6 +51,8 @@ function App() {
       return <ForgetPassword onClick={showPopup} changeinput={changeinput} inputValue={input} newpassword={newpassword} confirmPassword={confirmPassword}/>
     }else if(localStorage.getItem('currentPage')=="RegisterPage"){
       return <RegisterPage onClick={showPopup} changeinput={changeinput} inputValue={input}/>
+    }else if(localStorage.getItem("currentPage")=="VerifiPage"){
+      return <VerificationCode onClick={showPopup} changeinput={changeinput} inputValue={input}/>
     }else{
       return <LoginPage onClick={showPopup} changeinput={changeinput} inputValue={input}/>
     }
@@ -67,7 +70,6 @@ function App() {
       )}
       <div className='w-full h-screen bg-[#e7e7e7] flex items-center justify-center'>
         {currentPage()}
-        
       </div>
     </>
   )

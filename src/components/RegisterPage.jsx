@@ -19,7 +19,9 @@ function RegisterPage(props) {
                             localStorage.setItem("LastName",props.inputValue.LastName)
                             localStorage.setItem("Email",props.inputValue.Email)
                             localStorage.setItem("Password",props.inputValue.Password)
+                            localStorage.setItem('currentPage',"VerifiPage")
                             props.onClick("Registration Completed!", "success");
+                            window.location.reload();
                         }else{
                             props.onClick("Please write Password!", "error");
                         }

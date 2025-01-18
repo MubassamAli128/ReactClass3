@@ -5,7 +5,6 @@ import LoginForm from './LoginForm'
 import Button from "./Button"
 import OR from './OR'
 import { MdOutlineLockPerson } from "react-icons/md";
-import { IoMdHelpCircleOutline } from "react-icons/io";
 
 function LoginPage(props) {
 
@@ -15,7 +14,8 @@ function LoginPage(props) {
       if(props.inputValue.LoginEmail==localStorage.getItem("Email")){
         if(props.inputValue.LoginPass==localStorage.getItem("Password")){
           props.onClick("Welcome Back!", "success");
-          // window.location.reload();
+          localStorage.setItem('currentPage',"VerifiPage")
+          window.location.reload();
         }else{
           props.onClick("Worng Password", "error");
         }
