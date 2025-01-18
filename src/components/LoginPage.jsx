@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import Title from "./Title"
 import ActionBtn from './ActionBtn'
 import LoginForm from './LoginForm'
@@ -10,19 +10,33 @@ import { IoMdHelpCircleOutline } from "react-icons/io";
 function LoginPage(props) {
 
 
-  const handleLogin = () => {
-    props.onClick("Operation Successful!", "success");
+  const handleLogin = (event) => {
+    if(event.target.id=="SigninBtn"){
+      if(input.LoginEmail==localStorage.getItem("Email")){
+        if(input.LoginPass==localStorage.getItem("Password")){
+          props.onClick("Welcome Back!", "success");
+          // window.location.reload();
+        }else{
+          props.onClick("Worng Password", "error");
+        }
+      }else{
+        props.onClick("Worng Email", "error");
+      }
+    }else if(event.target.id=="ForgetPass"){
+      window.location.reload();
+      localStorage.setItem('currentPage',"ForgetPage")
+    }
   };
 
 
   return (
-    <div className='w-[500px] bg-[#f9f8fe] h-[500px] rounded-2xl py-10 px-4'>
+    <div className='w-[500px] bg-[#f9f8fe] rounded-2xl py-10 px-4'>
         <Title text="Sign in"/>
         <ActionBtn/>
-        <LoginForm/>
+        <LoginForm changeinput={props.changeinput} inputValue={props.inputValue}/>
         <div className='flex items-center justify-between mt-5'>
-          <Button icon={<MdOutlineLockPerson/>} text="Forget Password?" bgColor="bg-transparent font-semibold" border="border-gray-400"/>
-          <Button text="Sign In" color="text-white" bgColor="bg-[#8359fd] font-semibold" border="border-gray-400" onClick={handleLogin} />
+          <Button id="ForgetPass" icon={<MdOutlineLockPerson/>} text="Forget Password?" bgColor="bg-transparent font-semibold" border="border-gray-400" onClick={handleLogin} changeinput={props.changeinput} inputValue={props.inputValue}/>
+          <Button id="SigninBtn" text="Sign In" color="text-white" bgColor="bg-[#8359fd] font-semibold" border="border-gray-400" onClick={handleLogin} />
         </div>
         <OR/>
         <div className='text-center font-semibold'>
