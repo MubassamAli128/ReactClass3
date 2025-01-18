@@ -23,8 +23,11 @@ function LoginPage(props) {
         props.onClick("Worng Email", "error");
       }
     }else if(event.target.id=="ForgetPass"){
-      window.location.reload();
       localStorage.setItem('currentPage',"ForgetPage")
+      window.location.reload();
+    }else if(event.target.id=="a_register"){
+      localStorage.setItem('currentPage',"RegisterPage")
+      window.location.reload();
     }
   };
 
@@ -40,7 +43,7 @@ function LoginPage(props) {
         </div>
         <OR/>
         <div className='text-center font-semibold'>
-          have no account? <a href="" className='text-[#6131f0] hover:underline'>register</a>
+          have no account? <a id='a_register' href="" onClick={handleLogin} className='text-[#6131f0] hover:underline'>register</a>
         </div>
     </div>
   )

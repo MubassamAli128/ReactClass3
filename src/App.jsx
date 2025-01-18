@@ -3,11 +3,17 @@ import './index.css'
 import Popup from './components/Popup'
 import LoginPage from "./components/LoginPage"
 import ForgetPassword from './components/ForgetPassword'
+import RegisterPage from './components/RegisterPage'
+
 
 function App() {
   const [newpassword, setnewPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [input, setInput]=useState({
+    FirstName:"",
+    LastName:"",
+    Email:"",
+    Password:"",
     LoginEmail:"",
     LoginPass:"",
     NewPass:"",
@@ -42,6 +48,8 @@ function App() {
       return <LoginPage onClick={showPopup} changeinput={changeinput} inputValue={input}/>
     }else if(localStorage.getItem('currentPage')=="ForgetPage"){
       return <ForgetPassword onClick={showPopup} changeinput={changeinput} inputValue={input} newpassword={newpassword} confirmPassword={confirmPassword}/>
+    }else if(localStorage.getItem('currentPage')=="RegisterPage"){
+      return <RegisterPage onClick={showPopup} changeinput={changeinput} inputValue={input}/>
     }else{
       return <LoginPage onClick={showPopup} changeinput={changeinput} inputValue={input}/>
     }
