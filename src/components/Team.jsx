@@ -15,7 +15,7 @@ function Team(props) {
 
 
   return (
-    <div className='w-[500px] bg-[#f9f8fe] rounded-2xl py-10 px-4'>
+    <div className='w-full md:w-[500px] bg-[#f9f8fe] rounded-2xl py-10 px-4'>
         <Title text="Invite your team"/>
         <p className="text-center text-gray-400">Start collaborating on this new project.</p>
         <Input changeinput={props.changeinput} inputValue={props.email} name="team" title="Email" type="email" placeholder="Email address"/>

@@ -28,7 +28,7 @@ function Welcome(props) {
 
 
   return (
-    <div className='w-[500px] bg-[#f9f8fe] rounded-2xl py-10 px-4'>
+    <div className='w-full md:w-[500px] bg-[#f9f8fe] rounded-2xl py-10 px-4'>
         <Title text="Welcome to Untitled!"/>
         <p className='text-center text-gray-400'>Here are some quick tips to get started.</p>
         <div className='flex items-center justify-center mt-2 relative overflow-hidden' onMouseMove={handleMouseMove}>

@@ -78,7 +78,7 @@ function App() {
           onClose={() => setPopup(null)}
         />
       )}
-      <div className='w-full h-screen bg-[#e7e7e7] flex items-center justify-center'>
+      <div className='w-full h-screen bg-[#e7e7e7] flex items-center justify-center px-4'>
         {currentPage()}
       </div>
     </>

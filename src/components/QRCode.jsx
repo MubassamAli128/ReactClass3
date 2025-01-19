@@ -22,7 +22,7 @@ function QRCode(props) {
 
 
   return (
-    <div className='w-[500px] bg-[#f9f8fe] rounded-2xl py-10 px-4'>
+    <div className='w-full md:w-[500px] bg-[#f9f8fe] rounded-2xl py-10 px-4'>
         <Title text="2FA setup"/>
         <p className='text-center text-gray-400'>Scan the image below with your 2FA authenticator.</p>
         <div className='relative w-full flex flex-col items-center justify-center mt-2 overflow-hidden h-[180px]'>

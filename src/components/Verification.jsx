@@ -54,12 +54,12 @@ const VerificationCode = (props) => {
     }, [currentInput, inputRefs]);
 
   return (
-    <div className="w-[500px] bg-[#f9f8fe] rounded-2xl py-10 px-4 flex justify-center items-center flex-col">
+    <div className="w-full md:w-[500px] bg-[#f9f8fe] rounded-2xl py-10 px-4 flex justify-center items-center flex-col">
         <Title text="Enter verification code" />
         <p className="text-center text-gray-400">Create a free profile in less than 5 minutes.</p>
-        <div className="flex gap-2 mt-3">
+        <div className="flex gap-2 mt-3 items-center justify-center">
             {code.map((digit, index) => (
-                <input key={index} ref={(el) => (inputRefs.current[index] = el)} type="text" maxLength="1" value={digit} onChange={(e) => handleInputChange(e, index)} onKeyDown={(e) => handleKeyDown(e, index)} onPaste={handlePaste} className="w-16 h-16 border-2 font-semibold border-[#703bd0] rounded-md text-center text-lg focus:outline-none focus:ring-2 focus:ring-purple-500"/>
+                <input key={index} ref={(el) => (inputRefs.current[index] = el)} type="text" maxLength="1" value={digit} onChange={(e) => handleInputChange(e, index)} onKeyDown={(e) => handleKeyDown(e, index)} onPaste={handlePaste} className="w-[20%] h-16 border-2 font-semibold border-[#703bd0] rounded-md text-center text-lg focus:outline-none focus:ring-2 focus:ring-purple-500"/>
             ))}
         </div>
         <hr className="border border-gray-200 w-full mt-5" />

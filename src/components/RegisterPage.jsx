@@ -64,7 +64,7 @@ function RegisterPage(props) {
 
 
   return (
-    <div className='w-[500px] bg-[#f9f8fe] rounded-2xl py-10 px-4'>
+    <div className='w-full md:w-[500px] bg-[#f9f8fe] rounded-2xl py-10 px-4'>
         <Title text="Create a profile"/>
         <p className='text-center text-gray-400'>Create a free profile in less than 5 minutes.</p>
         <ActionBtn/>

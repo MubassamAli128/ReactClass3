@@ -48,7 +48,7 @@ function ForgetPassword(props) {
     const colorClass2 = getColorClass(props.confirmPassword.length);
 
   return (
-    <div className='w-[500px] bg-[#f9f8fe] rounded-2xl py-10 px-4 flex flex-col items-center gap-5'>
+    <div className='w-full md:w-[500px] bg-[#f9f8fe] rounded-2xl py-10 px-4 flex flex-col items-center gap-5'>
         <div className='w-full'>
             <Title text="Change Your Password"/>
             <p className='text-center text-gray-400'>Your new password must be different.</p>
