@@ -1,0 +1,12 @@
+.animation{
+    animation: animation 1s linear infinite alternate;
+}
+
+@keyframes animation {
+    0%{
+        height: 20px;
+    }
+    100%{
+        height: 180px;
+    }
+}
