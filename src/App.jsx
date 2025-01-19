@@ -5,6 +5,8 @@ import LoginPage from "./components/LoginPage"
 import ForgetPassword from './components/ForgetPassword'
 import RegisterPage from './components/RegisterPage'
 import VerificationCode from "./components/Verification"
+import QRCode from './components/QRCode'
+
 
 
 function App() {
@@ -53,6 +55,8 @@ function App() {
       return <RegisterPage onClick={showPopup} changeinput={changeinput} inputValue={input}/>
     }else if(localStorage.getItem("currentPage")=="VerifiPage"){
       return <VerificationCode onClick={showPopup} changeinput={changeinput} inputValue={input}/>
+    }else if(localStorage.getItem('currentPage')=="QRPage"){
+      return <QRCode  onClick={showPopup} changeinput={changeinput} inputValue={input}/>
     }else{
       return <LoginPage onClick={showPopup} changeinput={changeinput} inputValue={input}/>
     }

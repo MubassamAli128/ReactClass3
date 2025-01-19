@@ -4,6 +4,16 @@ import Button from "./Button";
 import { IoMdHelpCircleOutline } from "react-icons/io";
 
 const VerificationCode = (props) => {
+
+
+    const handleVerify=(event)=>{
+        if(event.target.id=="2FA"){
+            localStorage.setItem("currentPage","QRPage")
+            window.location.reload();
+        }
+    }
+
+
     const [code, setCode] = useState(["", "", "", "", "", ""]);
     const [currentInput, setCurrentInput] = useState(0);
     const inputRefs = useRef([]);
@@ -55,7 +65,7 @@ const VerificationCode = (props) => {
         <hr className="border border-gray-200 w-full mt-5" />
         <div className="flex items-center justify-between mt-5 w-full">
             <Button id="NeedHelp" icon={<IoMdHelpCircleOutline />} text="Need help?" bgColor="bg-transparent font-semibold" border="border-gray-400" onClick={props.changeinput} inputValue={props.inputValue} />
-            <Button id="2FA" text="Enable 2FA" color="text-white" bgColor="bg-[#8359fd] font-semibold" border="border-gray-400" onClick={""} />
+            <Button id="2FA" text="Enable 2FA" color="text-white" bgColor="bg-[#8359fd] font-semibold" border="border-gray-400" onClick={handleVerify} />
         </div>
     </div>
   );
