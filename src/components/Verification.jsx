@@ -8,17 +8,17 @@ const VerificationCode = (props) => {
     const [currentInput, setCurrentInput] = useState(0);
     const inputRefs = useRef([]);
 
-  const handleInputChange = (e, index) => {
-    const value = e.target.value;
-        if (/^\d?$/.test(value)) {
-            const newCode = [...code];
-            newCode[index] = value;
-            setCode(newCode);
+    const handleInputChange = (e, index) => {
+        const value = e.target.value;
+            if (/^[0-9]?$/.test(value)) {
+                const newCode = [...code];
+                newCode[index] = value;
+                setCode(newCode);
 
-            if (value && index < 5) {
-                setCurrentInput(index + 1);
+                if (value && index < 5) {
+                    setCurrentInput(index + 1);
+                }
             }
-        }
     };
 
     const handlePaste = (e) => {
