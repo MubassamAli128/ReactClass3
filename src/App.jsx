@@ -6,6 +6,8 @@ import ForgetPassword from './components/ForgetPassword'
 import RegisterPage from './components/RegisterPage'
 import VerificationCode from "./components/Verification"
 import QRCode from './components/QRCode'
+import Welcome from './components/Welcome'
+import TeamPage from './components/Team'
 
 
 
@@ -57,6 +59,10 @@ function App() {
       return <VerificationCode onClick={showPopup} changeinput={changeinput} inputValue={input}/>
     }else if(localStorage.getItem('currentPage')=="QRPage"){
       return <QRCode  onClick={showPopup} changeinput={changeinput} inputValue={input}/>
+    }else if(localStorage.getItem('currentPage')=="WelcomePage"){
+      return <Welcome onClick={showPopup} changeinput={changeinput} inputValue={input}/>
+    }else if(localStorage.getItem('currentPage')=="TeamPage"){
+      return <TeamPage onClick={showPopup} changeinput={changeinput} inputValue={input}/>
     }else{
       return <LoginPage onClick={showPopup} changeinput={changeinput} inputValue={input}/>
     }

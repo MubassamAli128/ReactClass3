@@ -5,6 +5,7 @@ import Button from './Button'
 import { MdOutlineCopyAll } from "react-icons/md";
 import { IoMdHelpCircleOutline } from "react-icons/io";
 import Image from "../assets/QR.png"
+
 import "./style.css"
 
 function QRCode(props) {
@@ -13,6 +14,9 @@ function QRCode(props) {
         if(event.target.id=="Copy"){
             navigator.clipboard.writeText("https://mubassamali128.github.io/My_Portfolio/");
             props.onClick("Copy Done!","success")
+        }else if(event.target.id=="Continue"){
+            localStorage.setItem('currentPage',"WelcomePage")
+            window.location.reload();
         }
     }
 
